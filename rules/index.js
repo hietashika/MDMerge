@@ -13,7 +13,6 @@ const CONSTANTS = {
   OUTPUT_DIR: '.cursor/rules',
   HEADING1_PREFIX: '# ',
   HEADING2_PREFIX: '## ',
-  HEADER_FILE: '_header.md', // ヘッダー情報として使用するファイル名
 };
 
 /**
@@ -48,12 +47,12 @@ async function extractFrontMatter(filePath) {
 }
 
 /**
- * ファイルが Markdown ファイルかつヘッダーファイルでないことを確認する
+ * ファイルが Markdown ファイルかどうかを確認する
  * @param {string} fileName - ファイル名
- * @returns {boolean} Markdownファイルかつヘッダーファイルでない場合はtrue
+ * @returns {boolean} Markdownファイルの場合はtrue
  */
 function isValidMarkdownFile(fileName) {
-  return fileName.endsWith(CONSTANTS.MARKDOWN_EXTENSION) && fileName !== CONSTANTS.HEADER_FILE;
+  return fileName.endsWith(CONSTANTS.MARKDOWN_EXTENSION);
 }
 
 /**
