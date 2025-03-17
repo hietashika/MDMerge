@@ -1,0 +1,20 @@
+{
+  "name": "mdmerge",
+  "version": "1.0.0",
+  "description": "Markdownファイルを結合してMDCファイルに出力するツール",
+  "main": "rules/index.js",
+  "scripts": {
+    "join": "node rules/index.js"
+  },
+  "keywords": [
+    "markdown",
+    "mdc",
+    "cursor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.1"
+  }
+}
